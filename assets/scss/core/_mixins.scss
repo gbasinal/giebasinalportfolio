@@ -1,0 +1,97 @@
+/**
+ * Typography Mixin
+ *
+ * This mixin is used to apply typography styles to an element.
+ * It uses the CSS clamp function to ensure the font-size and line-height fall within a specified range.
+ *
+ * @param {Number} $font-size-min - The minimum font-size value.
+ * @param {Number} $font-size-preferred - The preferred font-size value.
+ * @param {Number} $font-size-max - The maximum font-size value.
+ * @param {Number} $line-height-min - The minimum line-height value.
+ * @param {Number} $line-height-preferred - The preferred line-height value.
+ * @param {Number} $line-height-max - The maximum line-height value.
+ * @param {String} $font-weight - The font-weight value (optional).
+ * @param {String} $font-style - The font-style value (optional).
+ *
+ * @example
+ * .my-element {
+ *     @include typography(14px, 16px, 20px, 1.2, 1.4, 1.6, bold, italic);
+ * }
+ */
+ @mixin typography($font-size-min, $font-size-preferred, $font-size-max, $line-height-min, $line-height-preferred, $line-height-max, $font-weight: null, $font-style: null) {
+    font-size: clamp($font-size-min, $font-size-preferred, $font-size-max);
+    line-height: clamp($line-height-min, $line-height-preferred, $line-height-max);
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+
+    @if $font-style {
+        font-style: $font-style;
+    }
+}
+
+// End Typography Mixin
+
+
+// Responsive Breakpoints Mixins
+@mixin media-between($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max - 1}) {
+    @content;
+  }
+}
+
+@mixin media-min($min) {
+  @media (min-width: #{$min}) {
+    @content;
+  }
+}
+
+@mixin media-max($max) {
+  @media (max-width: #{$max - 1}) {
+    @content;
+  }
+}
+
+// End Responsive Mixins
+
+// PX to VW Mixin
+
+/**
+ * Function to convert pixel values to viewport width units.
+ *
+ * This function takes a pixel value and a screen width in pixels, and returns the equivalent value in viewport width units (vw).
+ * It is useful for responsive design, where elements should scale proportionally to the viewport width.
+ *
+ * @param {Number} $px - The pixel value to convert.
+ * @param {Number} $screen-width - The width of the screen in pixels.
+ *
+ * @return {Number} The equivalent value in viewport width units (vw).
+ *
+ * @example
+ * .my-element {
+ *     width: px-to-vw(300, 1200); // This will set the width to 25vw.
+ * }
+ */
+@function px-to-vw($px, $screen-width) {
+  @return #{($px / $screen-width) * 100}vw;
+}
+
+// End PX to VW Mixin
+
+// Font Family Mixins
+
+@mixin ff-helvetica{
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: normal;
+}
+
+@mixin ff-segoe{
+  font-family: "Segoe UI", sans-serif;
+  font-style: normal;
+}
+
+@mixin ff-roboto{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}

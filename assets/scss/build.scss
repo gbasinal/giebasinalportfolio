@@ -1,0 +1,9 @@
+$local : true;
+
+//NOTICE: REPLACE SECOND '../' WITH MEDIA01 LINK
+$root : if($local,'../','../');
+
+// *** Core ***
+@import "core/all";
+// *** Custom codes ***
+@import "custom/all";
