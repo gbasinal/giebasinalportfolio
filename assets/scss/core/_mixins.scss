@@ -81,17 +81,7 @@
 
 // Font Family Mixins
 
-@mixin ff-helvetica{
-  font-family: "Helvetica Neue", sans-serif;
-  font-style: normal;
-}
-
-@mixin ff-segoe{
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-}
-
-@mixin ff-roboto{
-  font-family: "Roboto", sans-serif;
+@mixin ff-poppins{
+  font-family: "Poppins", sans-serif;
   font-style: normal;
 }

@@ -1,0 +1,38 @@
+.background {
+    .section__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        .background__intro{
+            grid-column: 1/2
+        }
+        .background__jobs{
+            grid-column: 1/3;
+            .background__job{
+                margin-top: clamp(40px, px-to-vw(90, 1900), 120px);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                .background__job-company{
+                    margin-bottom: 20px;
+                    .item {
+                        &:nth-child(2){
+                            margin-bottom: 5px;
+                        }
+                        
+                    }
+                }
+                .item {
+                    margin: 0;
+                    grid-column: 1 /3;
+                    font-weight: 400;
+                    &.background__job-title{
+                        margin-bottom: 10px;
+                    }
+                    &:last-child{
+                        grid-column: 1/2;
+                    }
+                }
+            }
+        }
+    }
+}

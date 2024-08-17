@@ -1,0 +1,44 @@
+body {
+    @include ff-poppins;
+    background-color: $black;
+    color : $white;
+}
+
+b, strong {
+    font-weight:bold;
+}
+
+* {
+    outline: none !important;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    margin: 0;
+}
+
+
+h1{
+    @include typography(45px, px-to-vw(95, 1900), 110px, 1, 1.1, 1.3, 500, italic);
+}
+
+h2{
+    @include typography(30px, px-to-vw(65, 1900), 80px, 1, 1.1, 1.3, 700);
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    min-height: 100vh;
+    padding: clamp(50px, px-to-vw(100, 1900), 110px);
+    .section__content{
+        grid-column: 5 / -1;
+        grid-row: 2;
+        max-width: px-to-vw(950, 1900);
+        width: 100%;
+        @include media-max(1020px){
+            grid-column: 2 / -1;
+            max-width: 100%;
+        }
+    }
+}

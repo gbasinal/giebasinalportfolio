@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Hello, world!</title>
+    <title>Gie Basinal — Front End Developer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,104 @@
 </head>
 
 <body>
+
+
     <header>
-        <h1>Hello, world!</h1>
+        <div class="logo">
+            <a href="#" class="logo__item">
+                <span>G</span>
+                <span>i</span>
+                <span>e</span>
+                <span>&nbsp;</span>
+                <span>B</span>
+                <span>a</span>
+                <span>s</span>
+                <span>i</span>
+                <span>n</span>
+                <span>a</span>
+                <span>l</span>
+            </a>
+        </div>
+        <div class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item menu__item--active"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">Background</a></li>
+                <li class="menu__item"><a href="#">Work</a></li>
+                <li class="menu__item"><a href="#">About</a></li>
+                <li class="menu__item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section></section>
-        <section></section>
-        <section></section>
+
+        <section class="section intro"> 
+            <div class="section__content">
+                <h1 class="intro__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, excepturi.</h1>
+            </div>
+        </section>
+
+        <section class="section background">
+            <div class="section__content">
+                <div class="background__intro">
+                    <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque.</p>
+                </div>
+                <div class="background__jobs">
+                    <div class="background__job">
+                        <div class="background__job-company">
+                            <h3 class="company-name item">Box Clever</h3>
+                            <h5 class="company-type item">Web Design Agency</h5>
+                            <h6 class="company-location item">
+                                <span>2023-2024 | </span>
+                                <span>Alberta, CA</span>
+                            </h6>
+                        </div>
+                        <h2 class="background__job-title item">UX Developer</h2>
+                        <p class="background__job-description item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique.</p>
+                    </div>
+                    <div class="background__job">
+                        <div class="background__job-company">
+                            <h3 class="company-name item">GlobalTix</h3>
+                            <h5 class="company-type item">SaaS Tourism Provider</h5>
+                            <h6 class="company-location item">
+                                <span>2020-2022 | </span>
+                                <span>Manila, PH</span>
+                            </h6>
+                        </div>
+                        <h2 class="background__job-title item">Angular Developer</h2>
+                        <p class="background__job-description item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus, deleniti praesentium quaerat impedit laborum delectus repellendus id.</p>
+                    </div>
+                    <div class="background__job">
+                        <div class="background__job-company">
+                            <h3 class="company-name item">Dottystyle Creative</h3>
+                            <h5 class="company-type item">Creative Agency</h5>
+                            <h6 class="company-location item">
+                                <span>2018-2020 | </span>
+                                <span>Manila, PH</span>
+                            </h6>
+                        </div>
+                        <h2 class="background__job-title item">Front-end Developer</h2>
+                        <p class="background__job-description item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit facere reiciendis nam sequi. Aliquid, corrupti.</p>
+                    </div>
+                    <div class="background__job">
+                        <div class="background__job-company">
+                            <h3 class="company-name item">EnfraUSA</h3>
+                            <h5 class="company-type item">BPO</h5>
+                            <h6 class="company-location item">
+                                <span>2017-2018 | </span>
+                                <span>Manila, PH</span>
+                            </h6>
+                        </div>
+                        <h2 class="background__job-title item">Web Developer</h2>
+                        <p class="background__job-description item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit perspiciatis tenetur laborum explicabo fugit eaque dolor consequuntur hic modi quas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <small>©
@@ -30,7 +121,7 @@
         </small>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
 </body>
 
 </html>

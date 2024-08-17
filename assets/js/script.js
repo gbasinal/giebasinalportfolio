@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Main {
     constructor() {
         console.log("Main module initialized");
@@ -10,4 +8,3 @@ class Main {
 }
 
 export default Main;
-export { $ };
