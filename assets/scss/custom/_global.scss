@@ -30,7 +30,14 @@ h2{
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     min-height: 100vh;
-    padding: clamp(50px, px-to-vw(100, 1900), 110px);
+    padding: clamp(50px, px-to-vw(100, 1900), 110px) 0;
+    &.intro{
+        .section__content{
+            @include media-max(600px){
+                padding-right: 45px ;
+            }
+        }
+    }
     .section__content{
         grid-column: 5 / -1;
         grid-row: 2;

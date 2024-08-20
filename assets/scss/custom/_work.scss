@@ -1,0 +1,40 @@
+.work-content{
+    .section__content{
+        .work-samples{
+            h2{
+
+            }
+        }
+        .work-popups{
+            position: fixed;
+            top: 0;
+            background-color: $black;
+            bottom: 0;
+            visibility: hidden;
+            opacity: 0;
+            .work-popup__item{
+                .work-popup__content{
+                    .work-popup__title{
+
+                    }
+                    .work-popup__image{
+                        img{
+
+                        }
+                    }
+                    .work-popup__skills{
+                        li{
+
+                        }
+                    }
+                    .work-popup__description{
+                        p{
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
