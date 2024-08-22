@@ -49,3 +49,72 @@ h2{
         }
     }
 }
+
+
+
+
+// Animation Section
+
+.animate {
+    display : inline-block;
+    animation: fadeIn 1.25s $cubic-easing forwards;
+}
+
+.animate-faster {
+    display : inline-block;
+    animation: fadeIn 1s $cubic-easing forwards;
+}
+
+
+@keyframes glitchBlinking {
+    0% {
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 0.02;
+    }
+
+    24% {
+        opacity: 0.01;
+    }
+
+    36% {
+        opacity: 0.06;
+    }
+
+    54% {
+        opacity: 0.02;
+    }
+
+    74% {
+        opacity: 0.25;
+    }
+
+    82% {
+        opacity: 0.02;
+    }
+
+    92% {
+        opacity: 0.56;
+    }
+
+    96% {
+        opacity: 0.89;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
