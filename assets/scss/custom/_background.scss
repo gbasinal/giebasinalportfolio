@@ -20,7 +20,7 @@
                 margin-top: clamp(40px, px-to-vw(120, 1900), 150px);
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                min-height: 200px;
+                min-height: 250px;
                 @include media-max(600px){
                     grid-template-columns: 1fr;
                 }

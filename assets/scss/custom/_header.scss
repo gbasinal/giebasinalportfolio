@@ -33,6 +33,7 @@
 
 .menu{
     position: fixed;
+    z-index: 9;
     @include media-min(1020px){
         left: 0;
         top: 50%;

@@ -1,8 +1,9 @@
 .work-content{
     .section__content{
         .work-samples{
+            min-height: 100vh;
             h2{
-
+                cursor: pointer;
             }
         }
         .work-popups{
@@ -12,29 +13,100 @@
             bottom: 0;
             visibility: hidden;
             opacity: 0;
-            .work-popup__item{
+            transition: .25s $cubic-easing;
+            width: 100%;
+            // display: none;
+            &--visible{
+                opacity: 1;
+                visibility: visible;
+                // display: block;;
+            }
+            .close-btn{
+                position: fixed;
+                right: 100px;
+                top: 50px;
+                cursor: pointer;
+                z-index: 9;
+                span {
+                    svg {
+                        width: 50px;
+                        path {
+                            fill : white;
+                        }
+                    }
+                }
+            }
+            .work-popup__items{
                 .work-popup__content{
+                    opacity: 0;
+                    visibility: hidden;
+                    &--visible {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                     .work-popup__title{
 
                     }
                     .work-popup__image{
+                        margin-top: 50px;
+                        margin-left: 0;
                         img{
 
                         }
                     }
                     .work-popup__skills{
+                        display: flex;
+                        margin: 0;
+                        padding: 0;
                         li{
-
+                            list-style: none;                            
+                            color : $black;
+                            margin-right: 5px;
+                            span {
+                                background-color: $white;
+                                border-radius: 15px;
+                                padding: 5px 10px;
+                            }
                         }
                     }
                     .work-popup__description{
+                        max-width: 500px;
                         p{
 
+                        }
+                        a.link {
+                            display: inline-block;
+                            margin-top: 25px;
                         }
                     }
                 }
             }
         }
     }
+}
 
+.work-intro{
+    position: relative;
+    z-index: 1;
+    .icon-down{
+        display: inline-block;
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        opacity: 0;
+        visibility: 0;
+        transition: .5s $cubic-easing;
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        svg{
+            width: 25px;
+            path {
+                fill : $white;
+            }
+        }
+    }
 }

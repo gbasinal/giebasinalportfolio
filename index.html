@@ -42,22 +42,22 @@
         </div>
         <nav class="menu">
             <ul class="menu__list">
-                <li class="menu__item menu__item--active"><a href="#">Home</a></li>
-                <li class="menu__item"><a href="#">Background</a></li>
-                <li class="menu__item"><a href="#">Work</a></li>
-                <li class="menu__item"><a href="#">Contact</a></li>
+                <li class="menu__item menu__item--active" data-menu="intro"><a href="#intro">Home</a></li>
+                <li class="menu__item" data-menu="background"><a href="#background" >Background</a></li>
+                <li class="menu__item" data-menu="work"><a href="#work" >Work</a></li>
+                <li class="menu__item" data-menu="contact"><a href="#contact" >Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <section class="section intro" id="intro"> 
+        <section class="section intro observer" data-section="intro" id="intro"> 
             <div class="section__content">
                 <h1 class="intro__text"></h1>
             </div>
         </section>
 
-        <section class="section background background-intro observer" id="background">
+        <section class="section background background-intro observer" data-section="background" id="background">
             <div class="section__content">
                 <div class="background__intro">
                     <p class="section__text animate-fadein" data-text="I’m Reggie, a front-end developer with over 6 years of experience crafting user-friendly, visually engaging websites. I specialize in HTML, CSS, JavaScript, and Angular, and I love finding clever ways to turn complex problems into practical solutions. When I’m not coding, you’ll find me translating novels, playing games, or planning my next adventure with my wife. Corny jokes and a good beat keep me going – both in life and in code."></p>
@@ -67,7 +67,7 @@
         <section class="section background ">
             <div class="section__content">
                 <div class="background__jobs">
-                    <div class="background__job observer">
+                    <div class="background__job observer" data-section="background">
                         <div class="background__job-description-container">
                             <h2 class="background__job-title item animate-fadein" data-text="UX Developer"></h2>
                             <p class="background__job-description item animate-fadein" data-text="As a UX Developer at Box Clever, I worked closely with designers to turn ideas into seamless digital experiences. My role involved integrating mockups and prototypes into a proprietary CMS, ensuring everything looked and felt just right. I also took the lead on enhancing website performance through advanced web animations, making sure our sites were fast, smooth, and accessible across all browsers. Because let’s face it, a great website is one that everyone can enjoy."></p>
@@ -78,7 +78,7 @@
                             <h6 class="company-location item animate-fadein" data-text="2023-2024 | Alberta, CA"></h6>
                         </div>
                     </div>
-                    <div class="background__job observer">
+                    <div class="background__job observer" data-section="background">
                         <div class="background__job-description-container">
                             <h2 class="background__job-title item animate-fadein" data-text="Angular Developer"></h2>
                             <p class="background__job-description item animate-fadein" data-text="At GlobalTix, I was the go-to person for all things front-end, working with Angular to build and maintain components for a ticketing system. I collaborated with back-end teams to ensure seamless data integration and with designers to keep everything user-friendly. I also implemented real-time updates and notifications, turning the platform into a responsive and interactive experience. Oh, and I dabbled in GSP to help our clients send out some pretty cool email campaigns."></p>
@@ -89,7 +89,7 @@
                             <h6 class="company-location item animate-fadein" data-text="2020-2022 | Manila, PH"></h6>
                         </div>
                     </div>
-                    <div class="background__job observer">
+                    <div class="background__job observer" data-section="background">
                         <div class="background__job-description-container">
                             <h2 class="background__job-title item animate-fadein" data-text="Front-end Developer"></h2>
                             <p class="background__job-description item animate-fadein" data-text="At Dottystyle Creative, I got to flex my creative muscles by developing visually appealing websites from scratch using a mix of PHP, Laravel, HTML, CSS, JavaScript, and Angular. I brought websites to life with interactive elements and animations, often using the GSAP library to add that extra flair. Collaborating with designers and project managers was key to delivering cohesive, functional, and downright beautiful websites. Plus, I made sure our clients always got exactly what they needed – and maybe a little more."></p>
@@ -100,7 +100,7 @@
                             <h6 class="company-location item animate-fadein" data-text="2018-2020 | Manila, PH"></h6>
                         </div>
                     </div>
-                    <div class="background__job observer">
+                    <div class="background__job observer" data-section="background">
                         <div class="background__job-description-container">
                             <h2 class="background__job-title item animate-fadein" data-text="Web Developer"></h2>
                             <p class="background__job-description item animate-fadein" data-text="At EnfraUSA Solutions, I built websites from the ground up using HTML, CSS, JavaScript, and jQuery, ensuring they were not just functional but visually appealing too. I also got creative with graphics and logos, using Photoshop and Illustrator to bring client visions to life. Whether it was tackling tricky bugs or lending a hand to a teammate, I was always ready to jump in and solve problems. My goal? To make sure every project not only met expectations but had a little extra something that made it shine."></p>
@@ -115,15 +115,17 @@
             </div>
         </section>
 
-        <section class="section work-intro observer" id="work-intro">
+        <section class="section work-intro observer" data-section="work" id="work-intro">
             <div class="section__content">
                 <h2 class="work__title animate-fadein" data-text="Some of My Work"></h2>
+                <span class="icon-down animate-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg></span>
             </div>
         </section>
-        <section class="section work-content observer" id="work-content">
+        <section class="section work-content "  id="work-content">
             <div class="section__content">
-                <div class="work-samples">
+                <div class="work-samples observer" data-section="work">
                     <h2 class="work-samples__item animate-fadein" data-target="dottystyle" data-text="Dottystyle Creative"></h2>
+                    <h2 class="work-samples__item animate-fadein" data-target="boxclever" data-text="Box Clever"></h2>
                     <h2 class="work-samples__item animate-fadein" data-target="canmore" data-text="Town of Canmore"></h2>
                     <h2 class="work-samples__item animate-fadein" data-target="sperd" data-text="St. Paul Education School Division"></h2>
                     <h2 class="work-samples__item animate-fadein" data-target="fsd" data-text="Frontier School Division"></h2>
@@ -131,34 +133,122 @@
                     <h2 class="work-samples__item animate-fadein" data-target="notflix" data-text="Notflix"></h2>
                 </div>
                 <div class="work-popups">
-                    <div class="work-popup__item" id="dottystyle">
-                        <div class="work-popup__content">
-                            <h2 class="work-popup__title">Dottystyle Creative</h2>
-                            <figure class="work-popup__image">
-                                <img src="https://placehold.co/600x400" alt="Dottystyle Creative Preview Image">
-                            </figure>
+                    <div class="close-btn close-popup" >
+                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></span>
+                    </div>
+                    <div class="overlay-container">&nbsp;</div>
+                    <div class="work-popup__items">
+                        <div class="work-popup__content" data-work-popup="dottystyle">
+                            <h2 class="work-popup__title animate-popup" data-text="Dottystyle Creative"></h2>
                             <ul class="work-popup__skills">
-                                <li class="skills-item">html</li>
-                                <li class="skills-item">css/scss</li>
-                                <li class="skills-item">javascript/jquery</li>
-                                <li class="skills-item">gsap</li>
-                                <li class="skills-item">animation</li>
-                                <li class="skills-item">wordpress</li>
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
                             </ul>                         
                             <div class="work-popup__description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque.</p>
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                            </div>
+                        </div>
+                        <div class="work-popup__content" data-work-popup="boxclever">
+                            <h2 class="work-popup__title animate-popup" data-text="Box Clever"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="webguideCMS"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                                <a href="https://boxclever.ca/" class="animate-popup link" target="_blank" data-text="Link"></a>
+                            </div>
+                        </div>
+                        <div class="work-popup__content" data-work-popup="canmore">
+                            <h2 class="work-popup__title animate-popup" data-text="Town of Canmore"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                            </div>
+                        </div>
+                        <div class="work-popup__content" data-work-popup="sperd">
+                            <h2 class="work-popup__title animate-popup" data-text="St. Paul Education School Division"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                            </div>
+                                
+                        </div>
+                        <div class="work-popup__content" data-work-popup="fsd">
+                            <h2 class="work-popup__title animate-popup" data-text="Frontier School Division"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                            </div>
+
+                        </div>
+                        <div class="work-popup__content" data-work-popup="fep">
+                            <h2 class="work-popup__title animate-popup" data-text="Fort Edmonton Park Mobile App"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
+                            </div>
+                        </div>
+                        <div class="work-popup__content" data-work-popup="notflix">
+                            <h2 class="work-popup__title animate-popup" data-text="Notflix"></h2>
+                            <ul class="work-popup__skills">
+                                <li class="skills-item animate-popup" data-text="html"></li>
+                                <li class="skills-item animate-popup" data-text="css/scss"></li>
+                                <li class="skills-item animate-popup" data-text="javascript/jquery"></li>
+                                <li class="skills-item animate-popup" data-text="gsap"></li>
+                                <li class="skills-item animate-popup" data-text="animation"></li>
+                                <li class="skills-item animate-popup" data-text="wordpress"></li>
+                            </ul>                         
+                            <div class="work-popup__description">
+                                <p class="animate-popup" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel finibus massa. Sed vel purus vel neque ultricies tristique. Nulla facilisi. Sed non justo ac nunc tempus hendrerit. Donec lacus ante, consectetur ac purus ac, semper varius nisi. Donec vel convallis dui. Sed et ligula vel justo tincidunt pellentesque."></p>
                             </div>
                         </div>
                     </div>                        
                 </div>
             </div>
         </section>
-        <section class="section contact observer" id="contact">
+        <section class="section contact observer" data-section="contact" id="contact">
             <div class="section__content">
                 <h2 class="contact-title animate-fadein" data-text="Heya! I'm looking for opportunities!"></h2>
                 <p class="animate-fadein" data-text="Interested?"></p>
-                <p class="animate-fadein">Email me at <a href="mailto:giebasinal@gmail.com?subject=Im%20from%20interested!">giebasinal@gmail.com</a></p>
-                <p><a href="https://www.linkedin.com/in/giebasinal/" class="animate-fadein">LinkedIn</a></p>
+                <p>Email me at <a href="mailto:giebasinal@gmail.com?subject=Im%20from%20interested!">giebasinal@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/giebasinal/" target="_blank">LinkedIn</a></p>
             </div>
         </section>
     </main>
