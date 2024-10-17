@@ -28,6 +28,9 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 min-height: 250px;
+                @include media-min(1280px){
+                    max-width: 30vw;
+                }
                 @include media-max(600px){
                     grid-template-columns: 1fr;
                 }

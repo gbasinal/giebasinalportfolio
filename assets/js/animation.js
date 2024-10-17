@@ -117,17 +117,17 @@ class Animation {
         } else {
             console.log(container.event)
             // console.log(container.target.querySelector("span"));
-            for (let word of words) {
-                // console.log(word)
+            // for (let word of words) {
+            //     console.log(word)
                 
-                // let span = document.createElement('span');
-                // span.innerHTML = word + '&nbsp;';
-                // span.style.opacity = 0;
-                // let randomDelay = Math.random() * maxDelay;
-                // span.style.animationDelay = `${randomDelay}s`;
-                // span.classList.add('animate');
-                // container.appendChild(span);
-            }
+            //     let span = document.createElement('span');
+            //     span.innerHTML = word + '&nbsp;';
+            //     span.style.opacity = 0;
+            //     let randomDelay = Math.random() * maxDelay;
+            //     span.style.animationDelay = `${randomDelay}s`;
+            //     span.classList.add('animate');
+            //     container.appendChild(span);
+            // }
         }
 
     }
