@@ -7,6 +7,14 @@
             justify-content: center;
             h2{
                 cursor: pointer;
+                &.work-samples__item{
+                    color : #797979;
+                    transition: color .25s ease-in-out;
+                    &:hover{
+                        color : white;
+                    }
+                }
+
             }
         }
         .work-popups{
