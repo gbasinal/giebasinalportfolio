@@ -158,13 +158,14 @@ class Animation {
                 const menuListParentEl = event.target.parentElement;
                 const menuListEl = menuListParentEl.dataset.menu;
                 let targetSectionEl =  filteredSections.filter(section => section.dataset.section === menuListEl)
-                const targetSectionTop = targetSectionEl[0].offsetTop;      
-                console.log(targetSectionTop, window.scrollY)          
+                const rect = targetSectionEl[0].getBoundingClientRect();
+                let targetSectionTop = window.scrollY + rect.top;            
                 window.scrollTo({top: targetSectionTop, behavior:'smooth'});
             })
         })
 
     }
+
 
     workPopUpReveal = () => {
         const workPopupContainer = document.querySelector('.work-popups');
