@@ -6,6 +6,10 @@
         .background__intro{
             grid-column: 2/3;
             min-height: 130px;
+            @include media-max(821px){
+                padding-right: 60px;
+                grid-column: 1/3;
+            }
             @include media-max(450px){
                 grid-column: 1/-1;
                 padding-right: 45px;
@@ -13,6 +17,9 @@
         }
         .background__jobs{
             grid-column: 1/3;
+            @include media-max(800px){
+                padding-right: 60px;
+            }
             @include media-max(600px){
                 padding-right: clamp(0px, px-to-vw(145, 600), 150px);
             }

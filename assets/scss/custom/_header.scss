@@ -4,6 +4,13 @@
     position: fixed;
     left: 0;
     cursor: pointer;
+    @include media-max(1020px){
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+    @include media-max(600px){
+        padding-left: 10px;
+    }
     .logo__item{
         @include typography(16px, 26px, 30px, 1.2, 1.4, 1.6, 500);
         display: block;
@@ -89,6 +96,13 @@
     z-index: 10;
     @include media-min(1021px){
         display: none;
+    }
+    @include media-max(1020px){
+        right: 25px;
+        top: 25px;
+    }
+    @include media-max(600px){
+        right: 10px;
     }
     &.active{
         span{

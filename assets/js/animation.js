@@ -135,14 +135,31 @@ class Animation {
     smoothMenuNavigation = () => {
         const menuItem = document.querySelectorAll('.menu__item');
         const sections = document.querySelectorAll('.section');
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.menu-button');
         const filteredSections = [...sections].filter(section => section.dataset.section !== undefined);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (menu.classList.contains('active') && menuBtn.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        menuBtn.classList.remove('active');
+                    }
+                }
+            });
+        }, { threshold: .5 }); 
+    
+        filteredSections.forEach(section => observer.observe(section));
+
         menuItem.forEach( item =>{
             item.addEventListener('click', (event) => {
                 event.preventDefault();
                 const menuListParentEl = event.target.parentElement;
                 const menuListEl = menuListParentEl.dataset.menu;
                 let targetSectionEl =  filteredSections.filter(section => section.dataset.section === menuListEl)
-                const targetSectionTop = targetSectionEl[0].offsetTop;                
+                const targetSectionTop = targetSectionEl[0].offsetTop;      
+                console.log(targetSectionTop, window.scrollY)          
                 window.scrollTo({top: targetSectionTop, behavior:'smooth'});
             })
         })
@@ -153,20 +170,34 @@ class Animation {
         const workPopupContainer = document.querySelector('.work-popups');
         const workSamplesItem = document.querySelectorAll(".work-samples__item");
         const body = document.querySelector('body');
-        const menu = document.querySelector('.menu__list');
+        const menu = document.querySelector('header');
+        let isModalOpen = false;
 
         workSamplesItem.forEach(item => {
             item.addEventListener('click', (event) => {
-                const workPopupItem = event.target.parentElement;
+                const workPopupItem = event.target.closest(".work-samples__item");
+                if (!workPopupItem) return;
+
                 const workPopupItemData = workPopupItem.dataset.target;
                 const workPopupContent = document.querySelector(`.work-popup__content[data-work-popup="${workPopupItemData}"]`);
-                workPopupContent.classList.toggle('work-popup__content--visible');
-                workPopupContainer.classList.toggle('work-popups--visible');
-                if(this.lenis){
-                    this.lenis.stop();
-                    body.classList.add('scroll-disabled');
-                    menu.classList.add('disabled-click');
+                if (!workPopupContent) return;
+
+                workPopupContent.classList.add('work-popup__content--visible');
+                workPopupContainer.classList.add('work-popups--visible');
+                isModalOpen =!isModalOpen;
+                console.log(isModalOpen)
+                body.classList.add('scroll-disabled');
+                menu.classList.add('disabled-click');
+                if(isModalOpen){
+                    if(this.lenis){
+                        this.lenis.stop();
+                    }
+                }else {
+                    if (this.lenis) {
+                        this.lenis.start();
+                    }
                 }
+
                 workPopupContent.querySelectorAll(".animate-popup").forEach( item => {
                     if (!item.classList.contains('animated')) {  
                             
@@ -194,17 +225,20 @@ class Animation {
         const btn = document.querySelector('.close-popup');
         const workPopUpTexts = document.querySelectorAll(".animate-popup");
         const body = document.querySelector('body');
-        const menu = document.querySelector('.menu__list');
+        const menu = document.querySelector('header');
+
+
 
         btn.addEventListener('click', () => {
             workPopupContainer.classList.remove('work-popups--visible');
-            document.querySelector('.work-popup__content').classList.remove('work-popup__content--visible');
+            document.querySelectorAll('.work-popup__content').forEach(item => {
+                item.classList.remove('work-popup__content--visible');
+            });
             workPopUpTexts.forEach( item => {
                 item.classList.remove('animated');
                 item.classList.remove('animate-faster');
                 item.innerHTML = " ";
             })
-
             if(this.lenis){
                 this.lenis.start();
                 body.classList.remove('scroll-disabled');

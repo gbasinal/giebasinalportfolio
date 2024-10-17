@@ -63,6 +63,10 @@ a.link {
         grid-row: 2;
         max-width: px-to-vw(950, 1900);
         width: 100%;
+        @include media-between(1021px, 1025px){
+            grid-column: 4 / -1;
+            max-width: 100%;
+        }
         @include media-max(1020px){
             grid-column: 2 / -1;
             max-width: 100%;
@@ -74,6 +78,11 @@ a.link {
     pointer-events: none;
 }
 
+
+footer {
+    text-align: center;
+    padding: 5px 10px;
+}
 
 
 
